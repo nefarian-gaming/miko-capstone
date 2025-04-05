@@ -148,7 +148,6 @@ function App() {
   // Home page component
   const HomePage = () => (
     <div>
-      <Header />
       <Hero />
       <FeaturesBar />
       <Bestsellers />
