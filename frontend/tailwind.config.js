@@ -5,6 +5,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+    },
     colors: {
       primary: "#4F46E5",
       secondary: "#10B981",
@@ -21,10 +24,19 @@ module.exports = {
       }
     },
     extend: {
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-      },
+      // Other theme extensions can go here
     },
   },
   plugins: [],
+  // Enable all the core plugins explicitly
+  corePlugins: {
+    preflight: true,
+    container: true,
+    spacing: true,
+    borderRadius: true,
+    flexbox: true,
+    grid: true,
+    transitionProperty: true,
+    animation: true,
+  }
 }
