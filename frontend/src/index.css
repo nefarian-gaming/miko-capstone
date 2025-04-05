@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Slightly lighter background and standard dark text */
+    --background: #FFFFFF;
+    --foreground: #111827;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .btn {
+    /* Base button styles - adjust padding/font */
+    @apply inline-block px-6 py-3 rounded-sm font-medium text-sm tracking-wide transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  /* Updated to use accent color */
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-accent/90 focus:ring-accent;
+  }
+
+  /* Keep primary/secondary for potential other uses */
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90 focus:ring-primary;
+  }
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90 focus:ring-secondary;
+  }
+
+  .container {
+    /* Standard container */
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+  }
+
+  .card {
+    /* Basic card style - might need adjustment later */
+    @apply bg-white;
+  }
+
+  /* Keep input styles */
+  .input {
+    @apply px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+}
